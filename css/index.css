@@ -1,0 +1,465 @@
+.page-mainer .banner-section{
+  background: url(./../img/index_banner.jpg) no-repeat center;
+  height: 426px;
+  min-width: 1000px;
+}
+.page-mainer .banner-section h1{
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.navigator-section{
+  background: rgba(21, 49, 136, 0.95);
+  height: 70px;
+  color: #fff;
+}
+.navigator-bar.fixed-top{
+  position: fixed;
+  background: rgba(21, 49, 136, 0.95);
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navigator-bar ul{
+  display: flex;
+  list-style: none;
+  height: 70px;
+  width: 960px;
+  margin: 0 auto;
+  line-height: 70px;
+  justify-content: space-around;
+}
+.navigator-bar .nav-item{
+  width: 190px;
+  text-align: center;
+  cursor: pointer;
+}
+.navigator-bar .nav-item:hover{
+  background: rgba(45, 70, 148, 0.95);
+}
+.navigator-bar .nav-item.active{
+  background: rgba(45, 70, 148, 0.95);
+}
+
+.introduce-section{
+  width: 960px;
+  margin: 0 auto;
+  height: 240px;
+  padding-top: 60px;
+}
+.introduce-section h2{
+  background: url(./../img/index_Introduction.png) no-repeat 0 bottom;
+  height: 50px;
+  width: 140px;
+  text-align: center;
+  font-size: 20px;
+  color: #153188;
+  text-indent: -15px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.introduce-section p{
+  font-size: 14px;
+  line-height: 30px;
+  color: #333333;
+  text-align: justify;
+}
+.watch-section{
+  width: 960px;
+  margin: 0 auto;
+}
+.watch-section h2{
+  background: url(./../img/index_OnlineCourses.png) no-repeat 0 bottom;
+  height: 50px;
+  width: 140px;
+  text-align: center;
+  font-size: 20px;
+  color: #153188;
+  text-indent: -15px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.watch-describe{
+  height: 65px;
+  padding-top: 25px;
+}
+.watch-describe h3{
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.watch-describe p span{
+  font-size: 12px;
+  color: #999999;
+  margin-right: 15px;
+}
+
+.watch-container{
+  display: flex;
+  justify-content: space-between;
+}
+.watch-left{
+  width: 700px;
+}
+.watch-left .watch-subtitle{
+  height: 40px;
+  background: #f7f7f7;
+  font-size: 14px;
+  line-height: 40px;
+  color: #333;
+  padding-left: 50px;
+  position: relative;
+  border-top: 1px solid #e4e4e4;
+  cursor: pointer;
+}
+.watch-left .watch-rotate{
+  position: absolute;
+  background: url(./../img/index_OnlineCourses_left.png) no-repeat center;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 23px;
+  margin-top: -8px;
+  cursor: pointer;
+  transition: All 0.4s ease-in-out;
+}
+.watch-left .watch-rotate.active{
+  transform: rotate(-90deg);
+}
+
+.watch-left .watch-subtitle a{
+  position: absolute;
+  background: url(./../img/index_OnlineCourses_left_2.png);
+  width: 16px;
+  height: 15px;
+  top: 12px;
+  right: 20px;
+}
+.watch-left .watch-subtitle a:hover{
+  background: url(./../img/index_OnlineCourses_left_3.png);
+}
+.watch-left .watch-list{
+  font-size: 12px;
+  padding-left: 50px;
+}
+.watch-left .watch-list .watch-item{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #f5f5f5;
+  background: #fff;
+  color: #999999;
+  text-decoration: none;
+}
+.watch-left .watch-list .watch-item span{
+  float: right;
+  margin-right: 20px;
+}
+.watch-left .watch-list .watch-item:hover{
+  color: #009df7;
+}
+
+.watch-right{
+  width: 220px;
+  padding: 0 10px;
+}
+.watch-right .watch-lessonInfo{
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.watch-right h4{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.watch-right .watch-lessonInfo dl{
+  overflow: hidden;
+  font-size: 12px;
+}
+.watch-right .watch-lessonInfo dt{
+  width: 60px;
+  color: #999;
+  margin: 8px 0;
+}
+.watch-right .watch-lessonInfo dd{
+  margin: 8px 0;
+}
+.watch-right .watch-lessonInfo .tip a{
+  background: #f7f7f7;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 2px 5px;
+  color: #666;
+  margin-right: 1px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.watch-right .watch-lessonInfo .tip a:hover{
+  background: #e4e4e4;
+}
+
+.watch-techMeet ul{
+  font-size: 12px;
+  color: #666;
+  list-style: none;
+}
+.watch-techMeet li{
+  height: 44px;
+  margin-bottom: 15px;
+}
+.watch-techMeet ul img{
+  float: left;
+  margin-right: 10px;
+}
+.watch-techMeet .watch-techMeet-weibo a{
+  text-decoration: none;
+  color: #666;
+  line-height: 44px;
+}
+.watch-techMeet .watch-techMeet-qq{
+  position: relative;
+}
+.watch-techMeet .watch-techMeet-qq p{
+  margin-bottom: 8px;
+}
+.watch-techMeet .watch-techMeet-qq a{
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 2px;
+  background: #00a8ff;
+}
+.watch-techMeet .watch-techMeet-qq .watch-techMeet-qq-code{
+  display: none;
+  position: absolute;
+  width: 90px;
+  height: 120px;
+  top: 50px;
+  left: 40px;
+}
+.watch-techMeet-qq-block:hover .watch-techMeet-qq-code{
+  display: block;
+}
+
+.teachers-section{
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.swiper-container{
+  margin-top: 50px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+.swiper-wrapper{
+  position: relative;
+  display: flex;
+}
+.swiper-slide{
+  width: 240px;
+  height: 210px;
+  text-align: center;
+  flex: none;
+}
+.swiper-slide img{
+  margin-top: 10px;
+}
+.swiper-slide h3{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  margin-top: 12px;
+  margin-bottom: 7px;
+}
+.swiper-slide .swiper-slide-career{
+  height: 36px;
+  color: #999;
+  font-size: 12px;
+  line-height: 18px;
+}
+.swiper-slide .swiper-slide-intro{
+  padding-left: 6px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  width: 200px;
+  margin: 9px auto 0;
+}
+.swiper-button-prev{
+  position: absolute;
+  transition: all .3s;
+  background: rgba(226, 230, 234, 0.8);
+  width: 25px;
+  height: 40px;
+  top: 50%;
+  left: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.swiper-button-prev i{
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin-top: -6px;
+  margin-left: -5px;
+  transform: rotate(45deg);
+}
+.swiper-button-prev:hover{
+  background: rgba(177, 189, 198, 0.8);
+}
+.swiper-button-next{
+  position: absolute;
+  transition: all .3s;
+  background: rgba(226, 230, 234, 0.8);
+  width: 25px;
+  height: 40px;
+  top: 50%;
+  right: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.swiper-button-next i{
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin-top: -6px;
+  margin-left: -10px;
+  transform: rotate(-135deg);
+}
+.swiper-button-next:hover{
+  background: rgba(177, 189, 198, 0.8);
+}
+
+.products-section{
+  width: 960px;
+  margin: 50px auto 0;
+}
+.products-container{
+  padding: 30px 0;
+}
+.products-container img{
+  float: left;
+  margin-right: 20px;
+}
+
+.products-box h4{
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.products-box p{
+  font-size: 13px;
+  color: #666;
+  line-height: 1.8em;
+}
+.products-box-btn{
+  padding: 20px 0;
+}
+.products-box-btn > a{
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  line-height: 38px;
+  border: 1px solid #00a8ff;
+  font-size: 15px;
+  margin-right: 15px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.products-box-btn .bluebtn{
+  background-color: #00a8ff;
+  color: #fff;
+}
+.products-box-btn .whitebtn{
+  color: #00a8ff;
+  background-color: #fff;
+}
+.products-box-btn .whitebtn:hover{
+  background-color: #00a8ff;
+  color: #fff;
+}
+
+.products-box-tip span{
+  font-size: 15px;
+  color: #666;
+  margin-right: 10px;
+}
+.products-box-tip a{
+  padding: 5px 18px;
+  font-size: 12px;
+  color: #1c7c89;
+  margin-right: 10px;
+  background-color: #caeaef;
+  border-radius: 15px;
+  text-decoration: none;
+}
+.products-box-tip a:hover{
+  background: #bde4ea;
+}
+.products-link{
+  padding: 30px 0;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+}
+.products-link img{
+  cursor: pointer;
+}
+
+.about-section{
+  width: 960px;
+  height: 430px;
+  margin: 60px auto 0;
+}
+.about-section ul{
+  /* display: flex;
+  justify-content: space-around; */
+  list-style: none;
+  margin-top: 50px;
+}
+.about-section ul li{
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+.about-section ul li h3{
+  font-size: 14px;
+  margin-top: 20px;
+  color: #333;
+}
+.about-section ul li p{
+  font-size: 12px;
+  margin-top: 14px;
+  color: #999;
+}
+.about-section ul li a{
+  font-size: 14px;
+  line-height: 32px;
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  margin-top: 15px;
+  color: #fff;
+  background: #00a8ff;
+  border-radius: 2px;
+  text-decoration: none;
+}

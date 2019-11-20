@@ -1,0 +1,1 @@
+* DragonBoard™ 410c is the first development board based on the Qualcomm® Snapdragon™ 400 family of processors
