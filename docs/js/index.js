@@ -21,9 +21,7 @@ const PAGE = {
     //默认的醒目数量
     defaultLenght:null,
     //单个项目长度
-    itemWidth:null,
-    //单个项目移动距离边缘的距离
-    paddingOffset:0
+    itemWidth:240,
   },
 
   init:function(){
@@ -142,8 +140,6 @@ const PAGE = {
     PAGE.navAnimateTo(gotop)
   },
 
-
-
   //幻灯片克隆
   clone(){
     let swiperSlide = $('.swiper-slide');
@@ -196,9 +192,6 @@ const PAGE = {
       PAGE.data.isLock = false
     })
   },
-
-
-
 
   //导航滚动针频动画
   navAnimateTo:function(end){
