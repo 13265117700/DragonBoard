@@ -25,7 +25,7 @@ const PAGE = {
   },
 
   init:function(){
-    this.clone();
+    // this.clone();
     this.bind();
   },
   
@@ -34,8 +34,8 @@ const PAGE = {
     $(window).on('scroll',this.hideShow)
     $('.nav-item').on('click',this.goNavItem);
     $('.watch-subtitle').on('click',this.chapterSwitch);
-    $('.swiper-button-prev').on('click',this.swiperPrev);
-    $('.swiper-button-next').on('click',this.swiperNext);
+    // $('.swiper-button-prev').on('click',this.swiperPrev);
+    // $('.swiper-button-next').on('click',this.swiperNext);
     $('.watch-item').on('click',this.watchItem);
     $('.footer-gotop-top').on('click',this.gotop);
   },
@@ -109,16 +109,16 @@ const PAGE = {
   },
 
   //轮播上一项
-  swiperPrev(){
-    let index = PAGE.data.index;
-    PAGE.goIndex(index - 1)
-  },
+  // swiperPrev(){
+  //   let index = PAGE.data.index;
+  //   PAGE.goIndex(index - 1)
+  // },
 
   //轮播下一项
-  swiperNext(){
-    let index = PAGE.data.index;
-    PAGE.goIndex(index + 1)
-  },
+  // swiperNext(){
+  //   let index = PAGE.data.index;
+  //   PAGE.goIndex(index + 1)
+  // },
 
   //top到指定位置隐藏
   hideShow(){
@@ -141,57 +141,57 @@ const PAGE = {
   },
 
   //幻灯片克隆
-  clone(){
-    let swiperSlide = $('.swiper-slide');
-    let swiperWrapper = $('.swiper-wrapper').get(0);
+  // clone(){
+  //   let swiperSlide = $('.swiper-slide');
+  //   let swiperWrapper = $('.swiper-wrapper').get(0);
 
-    for(i=0;i<swiperSlide.length;i++){
-      swiperSlide[i].setAttribute('data-index',i);
-      let firstSwiper = swiperSlide[i].cloneNode(true);
-      swiperWrapper.appendChild(firstSwiper);
-    }
+  //   for(i=0;i<swiperSlide.length;i++){
+  //     swiperSlide[i].setAttribute('data-index',i);
+  //     let firstSwiper = swiperSlide[i].cloneNode(true);
+  //     swiperWrapper.appendChild(firstSwiper);
+  //   }
 
-    let index = PAGE.data.index;
-    let swiperSlideWidth = swiperSlide[0].offsetWidth;
-    PAGE.data.defaultLenght = swiperSlide.length;
-    PAGE.data.itemWidth = swiperSlideWidth;
-    PAGE.data.translateX = -(swiperSlideWidth + swiperSlideWidth * index)
+  //   let index = PAGE.data.index;
+  //   let swiperSlideWidth = swiperSlide[0].offsetWidth;
+  //   PAGE.data.defaultLenght = swiperSlide.length;
+  //   PAGE.data.itemWidth = swiperSlideWidth;
+  //   PAGE.data.translateX = -(swiperSlideWidth + swiperSlideWidth * index)
 
-    PAGE.goIndex(index)
-  },
+  //   PAGE.goIndex(index)
+  // },
 
   //轮播滑动动画
-  goIndex(index){
-    let swiperDuration = PAGE.data.duration;
-    let swiperWidth = PAGE.data.itemWidth;
-    let beginTranslateX = PAGE.data.translateX;
-    let endTranslateX = -(swiperWidth + swiperWidth * index);
-    if(PAGE.data.isLock){
-      return
-    }
-    PAGE.data.isLock = true
+  // goIndex(index){
+  //   let swiperDuration = PAGE.data.duration;
+  //   let swiperWidth = PAGE.data.itemWidth;
+  //   let beginTranslateX = PAGE.data.translateX;
+  //   let endTranslateX = -(swiperWidth + swiperWidth * index);
+  //   if(PAGE.data.isLock){
+  //     return
+  //   }
+  //   PAGE.data.isLock = true
 
-    let swiperWrapper = $('.swiper-wrapper').get(0);
-    PAGE.animateTo(beginTranslateX,endTranslateX,swiperDuration,function(value){
-      swiperWrapper.style.transform = `translateX(${value}px)`
-    },function(value){
-      let swiperLenght = PAGE.data.defaultLenght;
-      if(index === -1){
-        index = swiperLenght - 1;
-        value = -(swiperWidth + swiperWidth * index)
-      }
-      if(index === swiperLenght){
-        index = 0;
-        value = -(swiperWidth + swiperWidth * index)
-      }
+  //   let swiperWrapper = $('.swiper-wrapper').get(0);
+  //   PAGE.animateTo(beginTranslateX,endTranslateX,swiperDuration,function(value){
+  //     swiperWrapper.style.transform = `translateX(${value}px)`
+  //   },function(value){
+  //     let swiperLenght = PAGE.data.defaultLenght;
+  //     if(index === -1){
+  //       index = swiperLenght - 1;
+  //       value = -(swiperWidth + swiperWidth * index)
+  //     }
+  //     if(index === swiperLenght){
+  //       index = 0;
+  //       value = -(swiperWidth + swiperWidth * index)
+  //     }
 
-      swiperWrapper.style.transform = `translateX(${value}px)`
-      PAGE.data.index = index;
-      PAGE.data.translateX = value;
+  //     swiperWrapper.style.transform = `translateX(${value}px)`
+  //     PAGE.data.index = index;
+  //     PAGE.data.translateX = value;
 
-      PAGE.data.isLock = false
-    })
-  },
+  //     PAGE.data.isLock = false
+  //   })
+  // },
 
   //导航滚动针频动画
   navAnimateTo:function(end){
@@ -212,20 +212,20 @@ const PAGE = {
   },
 
   //轮播图滚动针频动画
-  animateTo(begin,end,duration,changeCallback,finishCallback){
-    let startTime = Date.now();
-    requestAnimationFrame(function update(){
-      let dataNow = Date.now();
-      let time = dataNow - startTime;
-      let value = PAGE.linear(time,begin,end,duration);
-      typeof changeCallback === 'function' && changeCallback(value)
-      if(startTime + duration >dataNow){
-        requestAnimationFrame(update)
-      }else{
-        typeof finishCallback === 'function' && finishCallback(end)
-      }
-    })
-  },
+  // animateTo(begin,end,duration,changeCallback,finishCallback){
+  //   let startTime = Date.now();
+  //   requestAnimationFrame(function update(){
+  //     let dataNow = Date.now();
+  //     let time = dataNow - startTime;
+  //     let value = PAGE.linear(time,begin,end,duration);
+  //     typeof changeCallback === 'function' && changeCallback(value)
+  //     if(startTime + duration >dataNow){
+  //       requestAnimationFrame(update)
+  //     }else{
+  //       typeof finishCallback === 'function' && finishCallback(end)
+  //     }
+  //   })
+  // },
 
   linear: function(time, begin, end, duration) { 
     return ( end - begin ) * time / duration + begin;
