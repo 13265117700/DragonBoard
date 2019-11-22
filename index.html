@@ -333,14 +333,17 @@
   </div>
   <script src="./js/jquery-3.4.1.js"></script>
   <script src="./js/index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  <script src="./js/swiper.min.js"></script>
 
   <script>
   
   const mySwiper = new Swiper ('.swiper-container',{
     loop: true, // 循环模式选项
-     // 如果需要前进后退按钮
+     
+     //显示的swiper数量
      slidesPerView: 4,
+
+     // 如果需要前进后退按钮
      navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
